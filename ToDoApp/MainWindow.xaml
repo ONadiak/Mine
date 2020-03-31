@@ -1,0 +1,24 @@
+﻿<Window x:Class="ToDoApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToDoApp"
+        mc:Ignorable="d"
+        Title="ToDoApp" Height="450" Width="843.182" Loaded="Window_Loaded">
+    <Grid Margin="0,0,-8,0">
+        
+        <DataGrid x:Name="dgToDoList" FontSize="16" FontWeight="Bold" Margin="10" Loaded="dgToDoList_Loaded" Grid.ColumnSpan="2" Grid.Column="1" AutoGenerateColumns="False" Grid.RowSpan="2">
+            <DataGrid.Columns>
+               
+                <DataGridTextColumn Binding="{ Binding Path = text3}" IsReadOnly="False" Header="ToDo" Width=" 200 " />
+                <DataGridTextColumn Binding="{ Binding Path = text4}" IsReadOnly="False" Header=" DescprionToDo" Width=" 600 "/>
+                <DataGridCheckBoxColumn Binding="{ Binding Path = IsDone, UpdateSourceTrigger = PropertyChanged }" IsReadOnly="False" Header=" Done " Width=" 65 "/>
+                <DataGridTextColumn Binding="{ Binding Path = Text }" IsReadOnly="False" Header=" Task " Width=" 200 "/>
+                <DataGridTextColumn Binding="{ Binding Path = text1}" IsReadOnly="False" Header="DescriptionOfTheTask " Width="600 "/>
+                <DataGridCheckBoxColumn Binding="{ Binding Path = IsDone2, UpdateSourceTrigger = PropertyChanged }" IsReadOnly="False" Header=" Done2 " Width=" 65 "/>
+                <DataGridTextColumn Binding="{ Binding Path = text2}" IsReadOnly="False" Header=" DeadLine " Width=" * " />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
